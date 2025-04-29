@@ -574,6 +574,7 @@ GameObject:
   - component: {fileID: 1312157125}
   - component: {fileID: 1312157127}
   - component: {fileID: 1312157126}
+  - component: {fileID: 1312157128}
   m_Layer: 0
   m_Name: QuotePanel
   m_TagString: Untagged
@@ -640,6 +641,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1312157124}
   m_CullTransparentMesh: 1
+--- !u!114 &1312157128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312157124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 35c99f1a322b7a243bbe96d107c95c7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  quoteText: {fileID: 0}
+  quotePanel: {fileID: 1312157124}
+  normalQuotes: []
+  finalQuote: 
 --- !u!1 &1358610551
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,7 +911,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1683536468}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 35c99f1a322b7a243bbe96d107c95c7d, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.Object, UnityEngine
+        m_MethodName: set_name
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: QuoteManager.HideQuoteAndContinue()
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1683536468
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -990,7 +1019,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Awesome beer quote here
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1301,6 +1330,39 @@ PrefabInstance:
     - target: {fileID: 8120578574242839168, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: quoteText
+      value: 
+      objectReference: {fileID: 2011119257}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: finalQuote
+      value: "\u201CSavor every sip \u2014 it might be your last.\u201D"
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: quotePanel
+      value: 
+      objectReference: {fileID: 1312157124}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: normalQuotes.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: 'normalQuotes.Array.data[0]'
+      value: Time passes, but laughter echoes.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: 'normalQuotes.Array.data[1]'
+      value: "Joy doesn\u2019t last \u2014 that\u2019s what makes it real."
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: 'normalQuotes.Array.data[2]'
+      value: In silence, we meet ourselves.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9038801171940378957, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
+      propertyPath: 'normalQuotes.Array.data[3]'
+      value: "Like each pour, life fills us up, but it\u2019s the empty glass that
+        reminds us to cherish what we had."
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -44,4 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db1fc054dc4d41a4880712bd5d424dce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalBeers: 3
+  totalBeers: 5

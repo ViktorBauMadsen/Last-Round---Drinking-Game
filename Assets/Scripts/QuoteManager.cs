@@ -19,7 +19,9 @@ public class QuoteManager : MonoBehaviour
     public void ShowQuote(bool isFinal)
     {
         quotePanel.SetActive(true);
+        Debug.Log("QuotePanel Active: " + quotePanel.activeSelf);
         quoteText.text = isFinal ? finalQuote : normalQuotes[Random.Range(0, normalQuotes.Length)];
+        Debug.Log("Quote Text: " + quoteText.text);
     }
 
     public void HideQuoteAndContinue()
