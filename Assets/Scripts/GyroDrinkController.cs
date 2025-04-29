@@ -7,6 +7,7 @@ public class GyroDrinkController : MonoBehaviour
 
     private void Start()
     {
+        Input.gyro.enabled = true;
         currentDrink = FindObjectOfType<Beer>();
     }
 
