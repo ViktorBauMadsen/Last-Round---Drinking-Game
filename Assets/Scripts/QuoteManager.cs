@@ -1,10 +1,11 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;    
 
 public class QuoteManager : MonoBehaviour
 {
     public static QuoteManager Instance;
-    public Text quoteText;
+    public TextMeshProUGUI quoteText;
     public GameObject quotePanel;
 
     public string[] normalQuotes;
