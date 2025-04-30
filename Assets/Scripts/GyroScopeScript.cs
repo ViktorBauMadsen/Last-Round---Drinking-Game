@@ -39,35 +39,38 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
         // Get the phone's tilt using the accelerometer (Input.acceleration)
         Vector3 tilt = Input.acceleration;
 
-        // Calculate the tilt angle on the Z-axis (horizontal tilt) and scale it to degrees
+        // Calculate the tilt angle on the X-axis (horizontal tilt) and scale it to degrees
         float zTilt = tilt.x * 90f;
+
+        // Use the absolute value of the tilt angle to detect tilting in both directions
+        float absoluteZTilt = Mathf.Abs(zTilt);
 
         // Check if enough time has passed since the last level change
         if (Time.time - lastLevelChangeTime < delayBetweenLevels)
             return; // If not enough time has passed, exit the method and do nothing
 
-        // Check if the tilt angle exceeds 10 degrees and the first level hasn't been triggered
-        if (zTilt > 10f && !levelTriggered[1])
+        // Check if the absolute tilt angle exceeds 15 degrees and the first level hasn't been triggered
+        if (absoluteZTilt > 15f && !levelTriggered[1])
         {
             SetBeerLevel(1); // Change the beer level to 1
         }
-        // Check if the tilt angle exceeds 20 degrees and the second level hasn't been triggered
-        else if (zTilt > 20f && !levelTriggered[2])
+        // Check if the absolute tilt angle exceeds 30 degrees and the second level hasn't been triggered
+        else if (absoluteZTilt > 30f && !levelTriggered[2])
         {
             SetBeerLevel(2); // Change the beer level to 2
         }
-        // Check if the tilt angle exceeds 30 degrees and the third level hasn't been triggered
-        else if (zTilt > 30f && !levelTriggered[3])
+        // Check if the absolute tilt angle exceeds 45 degrees and the third level hasn't been triggered
+        else if (absoluteZTilt > 45f && !levelTriggered[3])
         {
             SetBeerLevel(3); // Change the beer level to 3
         }
-        // Check if the tilt angle exceeds 40 degrees and the fourth level hasn't been triggered
-        else if (zTilt > 40f && !levelTriggered[4])
+        // Check if the absolute tilt angle exceeds 60 degrees and the fourth level hasn't been triggered
+        else if (absoluteZTilt > 60f && !levelTriggered[4])
         {
             SetBeerLevel(4); // Change the beer level to 4
         }
-        // Check if the tilt angle exceeds 50 degrees and the fifth level hasn't been triggered
-        else if (zTilt > 50f && !levelTriggered[5])
+        // Check if the absolute tilt angle exceeds 75 degrees and the fifth level hasn't been triggered
+        else if (absoluteZTilt > 75f && !levelTriggered[5])
         {
             SetBeerLevel(5); // Change the beer level to 5 (empty)
             OnBeerFinished(); // Call the method to handle the beer being finished
