@@ -18,5 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/QouteScene.unity
     guid: 62c8fedc1f1ad514da1817b3a34a1c29
   m_configObjects:
+    com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3f63620b7d0e39c4f86854760acbcb21, type: 2}
+    com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 1b0cecc44cb49ae44a06656c003719ae, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
