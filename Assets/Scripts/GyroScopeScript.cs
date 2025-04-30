@@ -1,71 +1,94 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class GyroDrinkController : MonoBehaviour
+public class GyroDrinkController : MonoBehaviour // Defining a class that controls the beer drinking simulation
 {
-    public Image beerLiquidImage;              // Assign your UI Image here
-    public Sprite[] beerLevelSprites;          // 6 Sprites: Full to Empty
+    public Image beerLiquidImage; // A reference to the UI Image that represents the beer liquid
+    public Sprite[] beerLevelSprites; // An array of 6 sprites representing the beer levels (from full to empty)
+    public float delayBetweenLevels = 0.8f; // The time delay (in seconds) between each beer level change
 
-    private int currentLevel = 0;
-    private bool[] levelTriggered;
+    private int currentLevel = 0; // Tracks the current beer level (0 = full, 5 = empty)
+    private bool[] levelTriggered; // An array to track whether each beer level has already been triggered
+    private float lastLevelChangeTime = 0f; // Stores the time when the last beer level change occurred
 
-    void Start()
+    void Start() // Unity's built-in method that runs once when the script is first initialized
     {
-        Input.gyro.enabled = true;
-
-        if (beerLevelSprites.Length != 6)
+        // Check if the beerLiquidImage is assigned in the Unity Inspector
+        if (beerLiquidImage == null)
         {
-            Debug.LogError("You must assign exactly 6 beer level sprites.");
-            return;
+            Debug.LogError("BeerLiquidImage is not assigned."); // Log an error if the image is missing
+            return; // Exit the method to prevent further execution
         }
 
+        // Check if the beerLevelSprites array is assigned and contains exactly 6 sprites
+        if (beerLevelSprites == null || beerLevelSprites.Length != 6)
+        {
+            Debug.LogError("You must assign exactly 6 beer level sprites."); // Log an error if the sprites are missing or incorrect
+            return; // Exit the method to prevent further execution
+        }
+
+        // Initialize the levelTriggered array to match the number of beer levels
         levelTriggered = new bool[beerLevelSprites.Length];
-        SetBeerLevel(0); // Start at full
+
+        // Set the initial beer level to full (level 0)
+        SetBeerLevel(0);
     }
 
-    void Update()
+    void Update() // Unity's built-in method that runs every frame
     {
-        float tilt = Input.gyro.gravity.y;
+        // Get the phone's tilt using the accelerometer (Input.acceleration)
+        Vector3 tilt = Input.acceleration;
 
-        // Check thresholds and update level
-        if (tilt < -0.15f && !levelTriggered[1])
+        // Calculate the tilt angle on the Z-axis (horizontal tilt) and scale it to degrees
+        float zTilt = tilt.x * 90f;
+
+        // Check if enough time has passed since the last level change
+        if (Time.time - lastLevelChangeTime < delayBetweenLevels)
+            return; // If not enough time has passed, exit the method and do nothing
+
+        // Check if the tilt angle exceeds 10 degrees and the first level hasn't been triggered
+        if (zTilt > 10f && !levelTriggered[1])
         {
-            SetBeerLevel(1);
+            SetBeerLevel(1); // Change the beer level to 1
         }
-        else if (tilt < -0.35f && !levelTriggered[2])
+        // Check if the tilt angle exceeds 20 degrees and the second level hasn't been triggered
+        else if (zTilt > 20f && !levelTriggered[2])
         {
-            SetBeerLevel(2);
+            SetBeerLevel(2); // Change the beer level to 2
         }
-        else if (tilt < -0.55f && !levelTriggered[3])
+        // Check if the tilt angle exceeds 30 degrees and the third level hasn't been triggered
+        else if (zTilt > 30f && !levelTriggered[3])
         {
-            SetBeerLevel(3);
+            SetBeerLevel(3); // Change the beer level to 3
         }
-        else if (tilt < -0.75f && !levelTriggered[4])
+        // Check if the tilt angle exceeds 40 degrees and the fourth level hasn't been triggered
+        else if (zTilt > 40f && !levelTriggered[4])
         {
-            SetBeerLevel(4);
+            SetBeerLevel(4); // Change the beer level to 4
         }
-        else if (tilt < -0.95f && !levelTriggered[5])
+        // Check if the tilt angle exceeds 50 degrees and the fifth level hasn't been triggered
+        else if (zTilt > 50f && !levelTriggered[5])
         {
-            SetBeerLevel(5);
-            OnBeerFinished();
+            SetBeerLevel(5); // Change the beer level to 5 (empty)
+            OnBeerFinished(); // Call the method to handle the beer being finished
         }
     }
 
-    // ? This is the missing method!
-    void SetBeerLevel(int level)
+    void SetBeerLevel(int level) // A method to update the beer level and change the UI sprite
     {
+        // Check if the level is within the valid range (0 to 5)
         if (level >= 0 && level < beerLevelSprites.Length)
         {
-            beerLiquidImage.sprite = beerLevelSprites[level];
-            currentLevel = level;
-            levelTriggered[level] = true;
+            beerLiquidImage.sprite = beerLevelSprites[level]; // Update the UI image to the corresponding sprite
+            currentLevel = level; // Update the current level to the new level
+            levelTriggered[level] = true; // Mark this level as triggered
+            lastLevelChangeTime = Time.time; // Record the time of this level change
         }
     }
 
-    void OnBeerFinished()
+    void OnBeerFinished() // A method that gets called when the beer is empty
     {
-        Debug.Log("Beer is empty!");
-        // You can show your quote here
-        // e.g. QuoteManager.Instance.ShowFinalQuote();
+        Debug.Log("Beer is empty!"); // Log a message to the console
+        QuoteManager.Instance.ShowQuote(false); // Show a random quote using the QuoteManager
     }
 }
