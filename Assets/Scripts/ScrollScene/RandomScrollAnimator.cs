@@ -7,7 +7,8 @@ public class RandomScrollAnimator : MonoBehaviour
 {
     public List<GameObject> scrolls; // Assign 4 scrolls here (not the final one)
     public GameObject finalScroll;   // Assign the last scroll here
-    public float scrollDuration = 3f;
+    public float scrollDuration = 5f;
+    public float speed = 400f;
 
     private static List<int> shownIndexes = new List<int>();
     private static int totalScrollsShown = 0;
@@ -63,11 +64,14 @@ public class RandomScrollAnimator : MonoBehaviour
 
         rt.anchoredPosition = endPos;
 
-        OnScrollComplete();
+        // After animation completes, wait 2 seconds then switch scene
+        yield return StartCoroutine(WaitAndSwitchScene());
     }
 
-    void OnScrollComplete()
+    IEnumerator WaitAndSwitchScene()
     {
+        yield return new WaitForSeconds(2f); // Wait for 2 seconds
+
         if (totalScrollsShown < 5)
         {
             SceneManager.LoadScene("SelectBeerScene");
