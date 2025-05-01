@@ -1,17 +1,30 @@
-using Microsoft.Unity.VisualStudio.Editor;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SwitchToQoute : MonoBehaviour
 {
-    public GameObject EmptyBeer_0_Sprite;
+	[Header("Drag your Image component here")]
+	public Image beerLiquidImage;   // or SpriteRenderer for world‐space sprites
 
-    public void Update()
-    {
-        if(EmptyBeer_0_Sprite.activeInHierarchy)
-        {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+	[Header("Drag your ‘Empty beer’ sprite asset here")]
+	public Sprite emptySprite;
+
+	bool hasSwitched = false;      // so we only load once
+
+	void Update()
+	{
+		// safety checks
+		if (hasSwitched || beerLiquidImage == null || emptySprite == null)
+			return;
+
+		// compare the currently showing sprite to your empty one
+		if (beerLiquidImage.sprite == emptySprite)
+		{
+			hasSwitched = true;
+			SceneManager.LoadScene(
+			  SceneManager.GetActiveScene().buildIndex + 1
+			);
 		}
-
-    }
+	}
 }
