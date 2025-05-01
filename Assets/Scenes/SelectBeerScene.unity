@@ -119,6 +119,57 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &67586657
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67586659}
+  - component: {fileID: 67586658}
+  m_Layer: 0
+  m_Name: BeerManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &67586658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67586657}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160a82a3abc24e640a208e7a66272c44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  beers:
+  - {fileID: 979994634}
+  - {fileID: 300023108}
+  - {fileID: 1726566363}
+  - {fileID: 1239436442}
+  - {fileID: 939680806}
+  totalBeers: 5
+--- !u!4 &67586659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67586657}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 483.12955, y: 1718.2493, z: -5.3795776}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &300023108
 GameObject:
   m_ObjectHideFlags: 0
@@ -231,7 +282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6071e575eeec123409b1f5265f3fedb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quote: 
   animationName: Beer2_Animation
 --- !u!114 &300023114
 MonoBehaviour:
@@ -476,7 +526,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6071e575eeec123409b1f5265f3fedb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quote: 
   animationName: Beer5_Animation
 --- !u!114 &939680812
 MonoBehaviour:
@@ -646,7 +695,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6071e575eeec123409b1f5265f3fedb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quote: 
   animationName: Beer1_Animation
 --- !u!114 &979994640
 MonoBehaviour:
@@ -1127,7 +1175,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6071e575eeec123409b1f5265f3fedb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quote: 
   animationName: Beer4_Animation
 --- !u!1 &1446346477
 GameObject:
@@ -1533,7 +1580,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6071e575eeec123409b1f5265f3fedb6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  quote: 
   animationName: Beer3_Animation
 --- !u!114 &1726566369
 MonoBehaviour:
@@ -1634,3 +1680,4 @@ SceneRoots:
   m_Roots:
   - {fileID: 1678826230}
   - {fileID: 1446346480}
+  - {fileID: 67586659}

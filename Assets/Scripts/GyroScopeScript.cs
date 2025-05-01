@@ -6,6 +6,7 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
     public Image beerLiquidImage; // A reference to the UI Image that represents the beer liquid
     public Sprite[] beerLevelSprites; // An array of 6 sprites representing the beer levels (from full to empty)
     public float delayBetweenLevels = 0.8f; // The time delay (in seconds) between each beer level change
+    public GameObject DrinkingSound; // Reference to the "DrinkingSound" object
 
     private int currentLevel = 0; // Tracks the current beer level (0 = full, 5 = empty)
     private bool[] levelTriggered; // An array to track whether each beer level has already been triggered
@@ -32,6 +33,12 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
 
         // Set the initial beer level to full (level 0)
         SetBeerLevel(0);
+
+        // Ensure the DrinkingSound is disabled at the start
+        if (DrinkingSound != null)
+        {
+            DrinkingSound.SetActive(false);
+        }
     }
 
     void Update() // Unity's built-in method that runs every frame
@@ -86,6 +93,18 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
             currentLevel = level; // Update the current level to the new level
             levelTriggered[level] = true; // Mark this level as triggered
             lastLevelChangeTime = Time.time; // Record the time of this level change
+
+            // Enable the DrinkingSound at the first level
+            if (level == 1 && DrinkingSound != null)
+            {
+                DrinkingSound.SetActive(true);
+            }
+
+            // Disable the DrinkingSound at the final level
+            if (level == 5 && DrinkingSound != null)
+            {
+                DrinkingSound.SetActive(false);
+            }
         }
     }
 
@@ -93,5 +112,11 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
     {
         Debug.Log("Beer is empty!"); // Log a message to the console
         QuoteManager.Instance.ShowQuote(false); // Show a random quote using the QuoteManager
+
+        // Ensure the DrinkingSound is disabled when the beer is empty
+        if (DrinkingSound != null)
+        {
+            DrinkingSound.SetActive(false);
+        }
     }
 }

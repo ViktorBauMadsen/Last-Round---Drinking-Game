@@ -78,7 +78,7 @@ public class RandomScrollAnimator : MonoBehaviour
         }
         else
         {
-            SceneManager.LoadScene("HomeScreen");
+            SceneManager.LoadScene("EndScene");
             shownIndexes.Clear();
             totalScrollsShown = 0;
         }

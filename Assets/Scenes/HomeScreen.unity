@@ -1128,6 +1128,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &940692371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 940692373}
+  - component: {fileID: 940692372}
+  m_Layer: 0
+  m_Name: GameData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &940692372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940692371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ac1a7fe1fdde024baa94d238a30bb52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedBeerNames: []
+--- !u!4 &940692373
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 940692371}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 483.12955, y: 1718.2493, z: -5.3795776}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &960331542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8120578574242839168, guid: b70048012ef445444ad7ec9d61bafeaf, type: 3}
@@ -1355,7 +1400,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 09ed5df901c0d403c861dab6510f5f44, type: 3}
   m_Resource: {fileID: 8300000, guid: 09ed5df901c0d403c861dab6510f5f44, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.14
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1862,3 +1907,4 @@ SceneRoots:
   - {fileID: 915945906}
   - {fileID: 1484080750}
   - {fileID: 1566549220}
+  - {fileID: 940692373}
