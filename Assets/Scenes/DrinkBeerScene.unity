@@ -560,7 +560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7052abee79ca5d8449bccc80373a8c82, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EmptyBeer_0_Sprite: {fileID: 356400268}
+  beerLiquidImage: {fileID: 356400270}
+  emptySprite: {fileID: 21300000, guid: c4124ae3235b67849bdfe378b1f890cc, type: 3}
 --- !u!1 &1678826227
 GameObject:
   m_ObjectHideFlags: 0
