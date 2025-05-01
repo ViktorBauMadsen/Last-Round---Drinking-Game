@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro; 
+using TMPro;    
+
 public class QuoteManager : MonoBehaviour
 {
     public static QuoteManager Instance;
@@ -24,24 +25,15 @@ public class QuoteManager : MonoBehaviour
     }
 
     public void HideQuoteAndContinue()
-{
-    quotePanel.SetActive(false);
-    if (!string.IsNullOrEmpty(finalQuote) && quoteText.text == finalQuote)
     {
-        // End game or go to menu
-        Debug.Log("Game ended or going to menu.");
-    }
-    else
-    {
-        DrinkManager drinkManager = Object.FindFirstObjectByType<DrinkManager>();
-        if (drinkManager != null)
+        quotePanel.SetActive(false);
+        if (!string.IsNullOrEmpty(finalQuote) && quoteText.text == finalQuote)
         {
-            drinkManager.SpawnBeer();
+            // End game or go to menu
         }
         else
         {
-            Debug.LogError("DrinkManager not found in the scene!");
+            FindObjectOfType<DrinkManager>().SpawnBeer();
         }
     }
-}
 }
