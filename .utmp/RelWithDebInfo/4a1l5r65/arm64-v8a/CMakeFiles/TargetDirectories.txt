@@ -1,0 +1,8 @@
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/CMakeFiles/edit_cache.dir
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/CMakeFiles/rebuild_cache.dir
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/GameActivity/CMakeFiles/game.dir
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/GameActivity/CMakeFiles/edit_cache.dir
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/GameActivity/CMakeFiles/rebuild_cache.dir
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/FramePacing/CMakeFiles/swappywrapper.dir
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/FramePacing/CMakeFiles/edit_cache.dir
+/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/.utmp/RelWithDebInfo/4a1l5r65/arm64-v8a/FramePacing/CMakeFiles/rebuild_cache.dir
