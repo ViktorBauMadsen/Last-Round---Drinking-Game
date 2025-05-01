@@ -131,7 +131,7 @@ GameObject:
   - component: {fileID: 268211071}
   - component: {fileID: 268211070}
   m_Layer: 0
-  m_Name: Image
+  m_Name: SunTzu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,8 +153,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000017166, y: 761}
-  m_SizeDelta: {x: 397.4574, y: 206.8797}
+  m_AnchoredPosition: {x: -0.0026779, y: -783}
+  m_SizeDelta: {x: 506.74, y: 206.8797}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &268211070
 MonoBehaviour:
@@ -505,6 +505,81 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TextWriter: {fileID: 451256817}
+--- !u!1 &1491151989
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1491151990}
+  - component: {fileID: 1491151992}
+  - component: {fileID: 1491151991}
+  m_Layer: 0
+  m_Name: Beer
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1491151990
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491151989}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1576080710}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 346, y: -907.15}
+  m_SizeDelta: {x: 286.63, y: 345.7055}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1491151991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491151989}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 7582740856861421944, guid: 76e41fbfbddab964c94413ed92e28dca, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1491151992
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1491151989}
+  m_CullTransparentMesh: 1
 --- !u!1 &1557402915
 GameObject:
   m_ObjectHideFlags: 0
@@ -669,6 +744,7 @@ RectTransform:
   - {fileID: 1464002125}
   - {fileID: 451256816}
   - {fileID: 268211069}
+  - {fileID: 1491151990}
   m_Father: {fileID: 1155203693}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -773,7 +849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -404, y: -198}
+  m_AnchoredPosition: {x: -397, y: 263}
   m_SizeDelta: {x: 233.5274, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1738454548
@@ -800,7 +876,7 @@ MonoBehaviour:
     just silence.\n\nYou tasted something: joy, memory, maybe a little sorrow.\n\nNo
     one tells you when the last sip comes. It just does.\n\nThis wasn\u2019t just
     a drink. It was a moment. And like all moments, it ends.\n\nSavor the next one
-    \u2014 it might be your last.\n\n- Sun Tzu"
+    \u2014 it might be your last........\n\n\n\n- Sun Tzu, The Art of Beer"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
