@@ -27,7 +27,7 @@ public class BeerWithSoundEffect : Beer
         {
             // Optionally set the clip dynamically if you have multiple sound effects
             // _audioSource.clip = pouringSoundClip;
-            _audioSource.Play();  // Play the audio clip
+            
             Debug.Log("Playing pouring sound effect for " + _beer.beerName);
         }
         else
