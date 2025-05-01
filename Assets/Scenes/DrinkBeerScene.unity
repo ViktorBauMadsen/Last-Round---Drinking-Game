@@ -667,7 +667,7 @@ MonoBehaviour:
   - {fileID: 6887060480447533171, guid: f958f37520ac93a4590baccc8ec1cd06, type: 3}
   - {fileID: 21300000, guid: c4124ae3235b67849bdfe378b1f890cc, type: 3}
   delayBetweenLevels: 0.8
-  DrinkingSound: {fileID: 0}
+  DrinkingSound: {fileID: 1996381660}
 --- !u!4 &1145304037
 Transform:
   m_ObjectHideFlags: 0
@@ -927,7 +927,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 0
 --- !u!4 &1996381661
 Transform:

@@ -659,7 +659,7 @@ MonoBehaviour:
   - {fileID: 469576203}
   - {fileID: 1591045007}
   finalScroll: {fileID: 334132421}
-  scrollDuration: 7
+  scrollDuration: 4
   speed: 400
 --- !u!1 &1340302083
 GameObject:

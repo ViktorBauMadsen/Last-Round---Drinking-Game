@@ -99,6 +99,12 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
             {
                 DrinkingSound.SetActive(true);
             }
+
+            // Disable the DrinkingSound at the final level
+            if (level == 5 && DrinkingSound != null)
+            {
+                DrinkingSound.SetActive(false);
+            }
         }
     }
 
@@ -107,7 +113,7 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
         Debug.Log("Beer is empty!"); // Log a message to the console
         QuoteManager.Instance.ShowQuote(false); // Show a random quote using the QuoteManager
 
-        // Disable the DrinkingSound when the beer is empty
+        // Ensure the DrinkingSound is disabled when the beer is empty
         if (DrinkingSound != null)
         {
             DrinkingSound.SetActive(false);
