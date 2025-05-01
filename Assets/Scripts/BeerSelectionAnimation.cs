@@ -3,7 +3,6 @@ using UnityEngine.SceneManagement;
 
 public class BeerSelectAnimation : MonoBehaviour
 {
-    public string quote;
     public string animationName = "Beer1_Select"; // Set in Inspector for each beer
 
     private Animator anim;
@@ -22,7 +21,8 @@ public class BeerSelectAnimation : MonoBehaviour
         anim.Play(animationName);
 
         // Add this beer to GameData
-      
+        GameData.Instance.SelectBeer(gameObject.name);
+
 
         // Optional: hide or disable beer after animation
         Invoke("DisableSelf", 3.0f); // wait for animation to finish
