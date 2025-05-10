@@ -20,6 +20,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/EndScene.unity
     guid: d4279a37a1c2c33479aebf523954d5fa
+  - enabled: 1
+    path: Assets/Scenes/SettingsScene.unity
+    guid: 6d2c18158d65b314180d61a4768e27ca
   m_configObjects:
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000, guid: cee2e96f9eab9ad4b871ef9d5ae40014, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 3f63620b7d0e39c4f86854760acbcb21, type: 2}
