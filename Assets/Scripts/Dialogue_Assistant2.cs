@@ -6,7 +6,6 @@ public class Dialogue_Assistant2 : MonoBehaviour
 {
     [SerializeField] private TextWriter2 TextWriter; // Use TextWriter2 instead of TextWriter
     private TextMeshProUGUI messageText;
-    private AudioSource TalkingAudioSource;
 
     private void Awake()
     {
