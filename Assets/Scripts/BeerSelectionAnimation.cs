@@ -2,72 +2,64 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections; // Add this to use IEnumerator
 
-public class BeerSelectAnimation : MonoBehaviour
+public class BeerSelectAnimation : MonoBehaviour // Inherit from MonoBehaviour for Unity lifecycle
 {
-    public string animationName = "Beer1_Select"; // Set in Inspector for each beer
+    public string animationName = "Beer1_Select"; // Name of the animation to play, set in Inspector
 
-    private Animator anim;
-    private bool hasBeenSelected = false;
-    public string beerName;  // Beer name (you can assign it in the Inspector or from a list)
-    private Beer _beer;
+    private Animator anim; // Reference to the Animator component
+    private bool hasBeenSelected = false; // Flag to prevent multiple selections
+    public string beerName;  // Name of the beer, set in Inspector or from a list
+    private Beer _beer; // Reference to a Beer object
 
     // Add a reference to the AudioSource component
-    private AudioSource _audioSource;
+    private AudioSource _audioSource; // Reference to the AudioSource for sound effects
 
-    void Awake()
+    void Awake() // Unity method called when the script instance is loaded
     {
-        anim = GetComponent<Animator>();
+        anim = GetComponent<Animator>(); // Get the Animator component attached to this GameObject
     }
 
-    void Start()
+    void Start() // Unity method called before the first frame update
     {
-        // Get the AudioSource component on the same GameObject
-        _audioSource = GetComponent<AudioSource>();
-        // Initialize the Beer class for any beer selected
-        _beer = new SimpleBeer(beerName); // SimpleBeer is just a basic class, see below
-        // Decorate the beer with sound effect
-        _beer = new BeerWithSoundEffect(_beer, _audioSource);
+        _audioSource = GetComponent<AudioSource>(); // Get the AudioSource component attached to this GameObject
+        _beer = new SimpleBeer(beerName); // Create a basic Beer object (SimpleBeer class assumed to exist)
+        _beer = new BeerWithSoundEffect(_beer, _audioSource); // Decorate the Beer with sound effect functionality
     }
 
-    public void PlayAnimation()
+    public void PlayAnimation() // Method to play the selection animation
     {
-        if (hasBeenSelected) return;
-        hasBeenSelected = true;
+        if (hasBeenSelected) return; // Prevent multiple selections
+        hasBeenSelected = true; // Mark as selected
 
-        anim.Play(animationName);
+        anim.Play(animationName); // Play the specified animation
 
-        // Add this beer to GameData
-        GameData.Instance.SelectBeer(gameObject.name);
+        GameData.Instance.SelectBeer(gameObject.name); // Add this beer to the selected list in GameData
 
-        // Delay the sound effect to sync with the animation
-        StartCoroutine(PlaySoundEffectWithDelay());
+        StartCoroutine(PlaySoundEffectWithDelay()); // Start coroutine to play sound after a delay
 
-        _beer.Drink();
+        _beer.Drink(); // Call the Drink method (with sound effect)
 
-
-        // Optional: hide or disable beer after animation
-        Invoke("DisableSelf", 3.0f); // wait for animation to finish
+        Invoke("DisableSelf", 3.0f); // Disable this GameObject after 3 seconds (animation duration)
     }
 
-    private IEnumerator PlaySoundEffectWithDelay()
+    private IEnumerator PlaySoundEffectWithDelay() // Coroutine to delay sound effect
     {
         yield return new WaitForSeconds(1f); // Wait for 1 second
 
-        // Play the sound effect
-        if (_audioSource != null)
+        if (_audioSource != null) // If AudioSource is assigned
         {
-            _audioSource.Play();
-            Debug.Log("Playing pouring sound effect for " + beerName);
+            _audioSource.Play(); // Play the sound effect
+            Debug.Log("Playing pouring sound effect for " + beerName); // Log the action
         }
         else
         {
-            Debug.LogWarning("AudioSource not assigned!");
+            Debug.LogWarning("AudioSource not assigned!"); // Warn if AudioSource is missing
         }
     }
 
-    void DisableSelf()
+    void DisableSelf() // Method to disable this GameObject and load next scene
     {
-        gameObject.SetActive(false);
-        SceneManager.LoadScene("DrinkBeerScene");
+        gameObject.SetActive(false); // Deactivate this GameObject
+        SceneManager.LoadScene("DrinkBeerScene"); // Load the "DrinkBeerScene"
     }
 }

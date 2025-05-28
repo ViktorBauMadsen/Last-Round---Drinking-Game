@@ -1,58 +1,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameData : MonoBehaviour
+public class GameData : MonoBehaviour // Inherit from MonoBehaviour for Unity lifecycle
 {
-    // Static instance of GameData to implement the Singleton pattern
-    public static GameData Instance;
+    public static GameData Instance; // Static instance for Singleton pattern
 
-    // List to store the names of selected beers
-    public List<string> selectedBeerNames = new List<string>();
+    public List<string> selectedBeerNames = new List<string>(); // List to store names of selected beers
 
-    // Awake is called when the script instance is being loaded
-    private void Awake()
+    private void Awake() // Unity method called when the script instance is loaded
     {
-        // Check if an instance of GameData already exists
-        if (Instance == null)
+        if (Instance == null) // If no instance exists yet
         {
-            // If no instance exists, assign this instance to the static Instance variable
-            Instance = this;
-
-            // Ensure this GameObject persists across scene loads
-            DontDestroyOnLoad(gameObject);
+            Instance = this; // Set this as the Singleton instance
+            DontDestroyOnLoad(gameObject); // Make this GameObject persist across scene loads
         }
         else
         {
-            // If an instance already exists, destroy this duplicate GameObject
-            Destroy(gameObject);
+            Destroy(gameObject); // Destroy duplicate GameObject if instance already exists
         }
     }
 
-    // Method to add a beer to the list of selected beers
-    public void SelectBeer(string beerName)
+    public void SelectBeer(string beerName) // Add a beer to the list of selected beers
     {
-        // Add the beer name to the list
-        selectedBeerNames.Add(beerName);
+        selectedBeerNames.Add(beerName); // Add the beer name to the list
     }
 
-    // Method to check if a specific beer has already been selected
-    public bool IsBeerSelected(string beerName)
+    public bool IsBeerSelected(string beerName) // Check if a beer has already been selected
     {
-        // Return true if the beer name exists in the list, otherwise false
-        return selectedBeerNames.Contains(beerName);
+        return selectedBeerNames.Contains(beerName); // Return true if beer is in the list
     }
 
-    // Method to check if all beers have been selected
-    public bool AllBeersSelected(int totalBeers)
+    public bool AllBeersSelected(int totalBeers) // Check if all beers have been selected
     {
-        // Compare the number of selected beers with the total number of beers
-        return selectedBeerNames.Count == totalBeers;
+        return selectedBeerNames.Count == totalBeers; // Return true if selected count matches total
     }
 
-    // Method to reset the game data
-    public void ResetGame()
+    public void ResetGame() // Reset the game data
     {
-        // Clear the list of selected beers
-        selectedBeerNames.Clear();
+        selectedBeerNames.Clear(); // Clear the list of selected beers
     }
 }
