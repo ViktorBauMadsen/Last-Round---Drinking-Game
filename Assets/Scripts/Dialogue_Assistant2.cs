@@ -2,7 +2,7 @@ using System.IO;
 using TMPro;
 using UnityEngine;
 
-// The class Dialogue_Assistant2 inherits from MonoBehaviour, making it a Unity script component.
+
 public class Dialogue_Assistant2 : MonoBehaviour
 {
     // A serialized field to reference the TextWriter2 script, allowing customization in the Unity Editor.
