@@ -6,25 +6,27 @@ using System.Collections;
 
 public class SwitchToQoute : MonoBehaviour
 {
-	public float DelaySeconds = 2f;
+	public float DelaySeconds = 2f;		//creating a float that determines how long x should be delayed for (to get rid of "magic numbers")
 
-	[Header("Image component here")]
-	public Image beerLiquidImage;
+	[Header("Image component here")]	//creating a name for what image goes here
+	public Image beerLiquidImage;		//creates an image called "beerLiquidImage"
 
-	[Header("''Empty beer’' sprite here")]
-	public Sprite emptySprite;
+	[Header("''Empty beer’' sprite here")]  //creating a name for what sprite goes here. It is a sprite because the file in the game we want to check for is a sprite
+	public Sprite emptySprite;          //creates a sprite called "emptySprite"
 
-	void Update()
+	void Update()						//you know what "void Update" means
 	{
-		if (beerLiquidImage.sprite == emptySprite)
+		if (beerLiquidImage.sprite == emptySprite)  //we say that; if the sprite that is active in "beerLiquidImage" equals/is the same one that is defined in "emptySprite", start the following code
 		{
-			StartCoroutine(LoadNextSceneAfterDelay());
+			StartCoroutine(LoadNextSceneAfterDelay());	//starting a coroutine called "LoadNextSceneAfterDelay"
 		}
 	}
 
-	IEnumerator LoadNextSceneAfterDelay()
+	IEnumerator LoadNextSceneAfterDelay()   //an ENUM (coroutine) called "LoadNextSceneAfterDelay"
 	{
-		yield return new WaitForSeconds(DelaySeconds);
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+		yield return new WaitForSeconds(DelaySeconds);	//yield means wait, yield return means wait with returning x. Here "x" is defined as new WaitForSeconds(DelaySeconds), where DelaySeconds was defined at the top
+		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);   //it just loads the next scene in the build
+		//more in depth: We take the SceneManager and open it up to see it's components, we select the LoadScene function and-
+		//-define what want to get inside the parantheses, taking the active scene and says it has to add +1 to the scenecount, forcing it to go to the next scene
 	}
 }
