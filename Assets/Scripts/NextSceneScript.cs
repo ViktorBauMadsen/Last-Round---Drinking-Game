@@ -1,6 +1,4 @@
-using UnityEditor.SearchService;
 using UnityEngine;
-using UnityEditor.SceneManagement;
 using UnityEngine.SceneManagement;
 
 public class NextSceneScript : MonoBehaviour

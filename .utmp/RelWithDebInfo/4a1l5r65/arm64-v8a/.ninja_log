@@ -1,0 +1,12 @@
+# ninja log v5
+3	195	1746116769784028768	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	daee34bb9db92440
+196	361	1746116769943518168	/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4a1l5r65/obj/arm64-v8a/libswappywrapper.so	2a19218ac93a9ea2
+1	607	1746116770189278045	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	718d575be49c128c
+2	608	1746116770192936097	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	dbd95c92a7614820
+3	630	1746116770215562989	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	5654af2a419adbec
+0	630	1746116770215777654	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	47d7b25c1114b65d
+3	682	1746116770269538074	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	f2aa1cc2d78863fc
+1	735	1746116770321259011	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	1ef13cb82cfad21f
+2	850	1746116770437083864	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	41d1eae5c8877822
+0	935	1746116770522177685	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	ce8ee7c44ab2dc58
+935	1049	1746116770633622366	/Users/williamspittaudupont/Desktop/GitHub/Last-Round---Drinking-Game/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/4a1l5r65/obj/arm64-v8a/libgame.so	da47f56cc7ea481a
