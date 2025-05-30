@@ -1,29 +1,29 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameManager : MonoBehaviour // GameManager inherits from MonoBehaviour for Unity lifecycle methods
 {
-    public static GameManager Instance;
+    public static GameManager Instance; // Static instance for Singleton pattern
 
-    public int totalBeers = 3;
-    private int beersDrunk = 0;
+    public int totalBeers = 3; // Total number of beers to be drunk, set in Inspector
+    private int beersDrunk = 0; // Counter for how many beers have been drunk
 
-    private void Awake()
+    private void Awake() // Unity method called when the script instance is loaded
     {
-        if (Instance == null) Instance = this;
-        Input.gyro.enabled = true;
+        if (Instance == null) Instance = this; // Assign this as the Singleton instance if not already set
+        Input.gyro.enabled = true; // Enable the device gyroscope for input
     }
 
-    public void OnBeerFinished()
+    public void OnBeerFinished() // Method to call when a beer is finished
     {
-        beersDrunk++;
+        beersDrunk++; // Increment the number of beers drunk
 
-        if (beersDrunk < totalBeers)
+        if (beersDrunk < totalBeers) // If not all beers are finished
         {
-            QuoteManager.Instance.ShowQuote(false);
+            QuoteManager.Instance.ShowQuote(false); // Show a regular quote
         }
         else
         {
-            QuoteManager.Instance.ShowQuote(true); // Final quote
+            QuoteManager.Instance.ShowQuote(true); // Show the final quote when all beers are finished
         }
     }
 }
