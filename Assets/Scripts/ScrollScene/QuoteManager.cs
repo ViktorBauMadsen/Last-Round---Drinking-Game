@@ -39,12 +39,8 @@ public class QuoteManager : MonoBehaviour // Defines a class called QuoteManager
             // This is where you could put code to end the game or return to the main menu,
             // since the final quote usually signifies the game is over.
         }
-        else
-        {
-            // If it wasn’t the final quote, then continue the game by calling the SpawnBeer method
-            // from another script called DrinkManager. This simulates progressing the gameplay.
-            FindObjectOfType<DrinkManager>().SpawnBeer();
-        }
+        
+        
     }
 }
 
