@@ -6,7 +6,7 @@ public class GameData : MonoBehaviour // Inherit from MonoBehaviour for Unity li
     public static GameData Instance; // Static instance for Singleton pattern
 
     public List<string> selectedBeerNames = new List<string>(); // List to store names of selected beers
-
+    
     private void Awake() // Unity method called when the script instance is loaded
     {
         if (Instance == null) // If no instance exists yet
