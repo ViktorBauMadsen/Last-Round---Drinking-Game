@@ -20,5 +20,6 @@ public class BeerManager : MonoBehaviour // BeerManager inherits from MonoBehavi
         {
             SceneManager.LoadScene("QuoteScene"); // If so, load the "QuoteScene" (could show a final message instead)
         }
+
     }
 }
