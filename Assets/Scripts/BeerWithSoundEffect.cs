@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BeerWithSoundEffect : Beer // Inherit from Beer abstract class
+public class BeerWithSoundEffect
 {
     private Beer _beer; // Reference to the Beer object being decorated
     private AudioSource _audioSource;  // Reference to the AudioSource component for sound effects
@@ -10,6 +10,14 @@ public class BeerWithSoundEffect : Beer // Inherit from Beer abstract class
     {
         _beer = beer; // Store the Beer object to decorate
         _audioSource = audioSource; // Store the AudioSource for playing sounds
+    }
+
+    public Beer Beer
+    {
+        get => default;
+        set
+        {
+        }
     }
 
     // Override the Drink method to add sound effect before the original behavior

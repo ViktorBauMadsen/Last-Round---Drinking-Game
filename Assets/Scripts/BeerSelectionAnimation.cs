@@ -14,6 +14,14 @@ public class BeerSelectAnimation : MonoBehaviour // Inherit from MonoBehaviour f
     // Add a reference to the AudioSource component
     private AudioSource _audioSource; // Reference to the AudioSource for sound effects
 
+    public Beer Beer
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     void Awake() // Unity method called when the script instance is loaded
     {
         anim = GetComponent<Animator>(); // Get the Animator component attached to this GameObject

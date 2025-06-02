@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Beer">
+    <Position X="1.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Beer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BeerSelectAnimation" Collapsed="true">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IIABAAAAACAAAAAAAAEAEAAAAAAgAAAAAwAAAAAACEA=</HashCode>
+      <FileName>Assets\Scripts\BeerSelectionAnimation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BeerWithSoundEffect">
+    <Position X="2.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAEAEAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>Assets\Scripts\BeerWithSoundEffect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dialogue_Assistant2" Collapsed="true">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAACAACAAIAEA=</HashCode>
+      <FileName>Assets\Scripts\Dialogue_Assistant2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameData" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAAAEAAAAAAIABAAAAAAAAQIAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameData.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GameManager" Collapsed="true">
+    <Position X="7" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAAAAAAAAAAAAIAAACAAAQAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\GameManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GyroDrinkController" Collapsed="true">
+    <Position X="8.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAwBAABAACAAEBAAAAABAAAAIAAAAAQABAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\GyroScopeScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MusicManager" Collapsed="true">
+    <Position X="10.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAACAAAAAAAAAABAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\MusicManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NextSceneScript" Collapsed="true">
+    <Position X="5.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\NextSceneScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SimpleBeer">
+    <Position X="0.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\SimpleBeer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SwitchToQoute" Collapsed="true">
+    <Position X="5.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAgABAAAA=</HashCode>
+      <FileName>Assets\Scripts\SwitchToQoute.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TextWriter2" Collapsed="true">
+    <Position X="7" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAgAAAAAAAAAAAAAAAAAACAAAAAAAgAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\TextWriter2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UIManager" Collapsed="true">
+    <Position X="8.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\UIManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuoteManager" Collapsed="true">
+    <Position X="7" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAQgAAAAAABAAAAAAAAAEAAAAAAAAQAAAAAAAAEQ=</HashCode>
+      <FileName>Assets\Scripts\ScrollScene\QuoteManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QuoteScript" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\ScrollScene\QuoteScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RandomScrollAnimator" Collapsed="true">
+    <Position X="10.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAQACAQgAAgAAAAgAAAAAAAAQAAAQAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\ScrollScene\RandomScrollAnimator.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

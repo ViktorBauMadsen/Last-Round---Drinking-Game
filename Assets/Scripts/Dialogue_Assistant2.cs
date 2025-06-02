@@ -14,6 +14,14 @@ public class Dialogue_Assistant2 : MonoBehaviour
     // A private variable to hold a reference to the AudioSource component for playing audio.
     private AudioSource TalkingAudioSource;
 
+    public TextWriter2 TextWriter2
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     // Unity's Awake method is called when the script instance is being loaded.
     private void Awake()
     {

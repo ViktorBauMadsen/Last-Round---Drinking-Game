@@ -16,7 +16,7 @@ public class SwitchToQoute : MonoBehaviour
 											//because the file in the game we want to check for is a sprite
 	public Sprite emptySprite;          //creates a sprite called "emptySprite"
 
-	void Update()						//you know what "void Update" means
+    void Update()						//you know what "void Update" means
 	{
 		if (beerLiquidImage.sprite == emptySprite)  //we say that; if the sprite that is active in "beerLiquidImage" equals/is
 													//the same one that is defined in "emptySprite", start the following code

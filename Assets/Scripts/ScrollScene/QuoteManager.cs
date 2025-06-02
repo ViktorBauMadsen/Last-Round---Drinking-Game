@@ -12,6 +12,14 @@ public class QuoteManager : MonoBehaviour // Defines a class called QuoteManager
     public string[] normalQuotes;              // An array of normal quote strings. A random one will be shown unless it's the final quote.
     public string finalQuote;                  // A single special quote that is shown when the game reaches a final point.
 
+    public DrinkManager DrinkManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     private void Awake()                       // Unity's built-in method that is called when the object is initialized, before Start(). Often used to set up references or initial settings.
     {
         if (Instance == null) Instance = this; // Checks if the static Instance variable is null. If it is, assigns this object as the instance. Ensures only one instance exists (Singleton).

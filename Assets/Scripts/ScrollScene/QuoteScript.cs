@@ -5,6 +5,14 @@ public class QuoteScript : MonoBehaviour  // Defines a MonoBehaviour script that
     public float speed = 200f;    // Controls how fast the object moves horizontally. Higher values mean faster movement.
     public float targetX = 0f;    // The final horizontal (X-axis) position the object should move toward.
 
+    public QuoteManager QuoteManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     void Update()  // Unity’s built-in method that runs once per frame. Used for checking and updating behavior continuously.
     {
         Vector3 pos = transform.localPosition;  // Gets the object's current position relative to its parent (local space).

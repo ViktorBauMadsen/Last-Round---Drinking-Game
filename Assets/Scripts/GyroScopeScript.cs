@@ -12,6 +12,14 @@ public class GyroDrinkController : MonoBehaviour // Defining a class that contro
     private bool[] levelTriggered; // An array to track whether each beer level has already been triggered
     private float lastLevelChangeTime = 0f; // Stores the time when the last beer level change occurred
 
+    public GameManager GameManager
+    {
+        get => default;
+        set
+        {
+        }
+    }
+
     void Start() // Unity's built-in method that runs once when the script is first initialized
     {
         // Check if the beerLiquidImage is assigned in the Unity Inspector
